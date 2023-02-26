@@ -1,4 +1,4 @@
-export const chunkArray: <T>(array: T[], chunkSize: number) => T[][] = (array, chunkSize) => {
+export function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   const result: T[][] = [];
   const arrayCopy = [...array];
 
@@ -6,4 +6,4 @@ export const chunkArray: <T>(array: T[], chunkSize: number) => T[][] = (array, c
     result.push(arrayCopy.splice(0, chunkSize));
   }
   return result;
-};
+}
